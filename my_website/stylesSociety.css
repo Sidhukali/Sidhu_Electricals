@@ -1,0 +1,55 @@
+body {background-color : black;}
+#topImage {
+	color : greenyellow;		
+	border : solid;
+	border-color : #ffff;
+	text-align : center;
+	display : block;
+	padding : 26px;
+	align-content : center;
+	margin : 2em ;
+	
+	
+}
+#dynamicText {
+	color : green;
+}
+
+#imgMain {
+	text-align : center;
+	padding : 16px ;
+	margin-left : 2em;
+	margin-right : 2em;
+	background-color : #fff;
+	width : 130px;
+	height : 150px;
+	border : ;
+
+}
+.socialLinks {
+	width: 20px;
+	height : 20px;
+	padding : 20px;
+	margin : 4em;
+	text-align : none;
+	display : solid;
+}
+.fullPage {
+	padding : 16px;
+	margin : 2em;
+	background-color : black;
+	color : royalblue;
+	
+}
+.mainContent {
+	color : royalblue;
+	}
+
+.header {
+	border: solid;	
+	border-color : brown;
+	padding : 20px;
+	/*margin : 2em;*/
+	text-align : center;
+}
+

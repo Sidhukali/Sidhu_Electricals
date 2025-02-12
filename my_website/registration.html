@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="trial.css">
+</head>
+<body>
+    <h4 >REGISTRATION FORM</h4>
+    
+	<form action="/index.html" name="login" id="form" method="POST" >
+		
+		
+		<div class="formContent">
+		  	<lable for="username">UserName :
+				<input type="text" name="username" id="userName2" required style="margin-left: 4.5em" placeholder="Enter name"/>
+			</lable>
+			<br>
+			<lable> Password : 
+				<input type="password" name="password" id="password2" style="margin-left: 4.9em" placeholder="Enter password"/>
+			</lable>
+			
+			<br>
+			<lable> confirm password :
+				<input type="password" name="confpassword" id="confpassword" style="margin-left: 0px; padding-left: -1em;" placeholder="Re-Enter password"/>
+			</lable>
+			<br>
+			<lable> Email :
+				<input type="email" name="email" id="email" required="false" style="margin-left: 8.5em" placeholder="i.e abc123@xwz.com"/>
+			</lable>
+			<br>
+			<lable> Phone Number :
+				<input type="tel" style="margin-left: 2em"  value="+254"/>
+			</lable>
+			<br>
+			<lable> DOB :
+				<input type="date" name="dateofbirth" id="DateOfBirth" style="margin-left: 3em" />
+			</lable>
+			<br>
+			
+			<lable> Gender : 
+				<input type="Radio" for="Male" Value="Male">
+                
+                
+			</lable>
+			
+			<lable id="terms"> Agree to terms of service
+				<input type="checkbox" name="terms" id="terms">
+			</lable>
+			<button type="submit" id="login">Login</button>
+		</div>
+	</form>
+	<script src="trial.js"></script>
+</body>
+</html>
+

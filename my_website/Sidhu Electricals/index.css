@@ -1,0 +1,382 @@
+h3{
+    
+    padding-left: 16px;
+    padding-top: 16px;
+    color: blue;
+    font-weight:400;
+}
+#search_Box{
+    padding-left: 20px;
+    margin-left: 20px;
+    background-color: #ccc;
+    vertical-align: middle;
+    display: inline-block;
+   
+}
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 10;
+}
+.dropdown-icon {
+    width: 40px;
+    height: 5px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    
+
+}
+.dropdown-icon button{
+    color:blue
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block
+}
+.dropdown-menu li {
+    list-style:lower-latin;
+    padding: 10px 20px;
+     cursor: pointer;
+    border-bottom: 1px solid #ddd;
+  }
+  .dropdown-menu li:last-child {
+    display: block;
+    border-bottom: none;
+  }
+  .dropdown-menu li:hover {
+    display: block;
+    background-color: #f0f0f0;
+    color: black;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+menu{
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    border: 2px solid blue;
+    background-color:rgb(24, 19, 13) ;
+}
+
+#page-links{
+    align-items:center;
+    justify-items: left;
+    padding: 16px;
+    margin: 16px;
+    border: 2px solid blue;
+    column-gap:0;
+}
+.menu2{
+    text-align: right;
+    display: inline-block;
+    justify-content: right;
+    align-items: right;
+    padding: 20px;
+    margin: 16px;
+}
+.title{
+    flex: 1;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    border-radius:30px;
+    border:2px solid aliceblue;
+    color: yellow;
+    align-items: center;
+    text-align: center;
+    
+
+}
+#dynamic-title{
+    padding:20px;
+
+}
+.logo{
+    background-color: black;
+    height:350px;
+    align-items: center;
+    display: flex;
+    justify-content:center;
+    border: 2px solid blue;
+    color: white;
+    
+}
+.menu-buttons{
+    justify-content: left;
+    text-align: left;
+    display:block;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+img{
+    height:300px;
+    width: 400px;
+    padding: 20px;
+    border-radius: 50%;
+    
+    
+}
+
+#main{
+    column-count: 2;
+    border-style: double;
+    padding: 2rem;
+    margin: 3em;
+    flex:1rem;
+    background-color:#666;
+
+}
+/*.right{
+    padding: 5px;
+    
+    color :blue;
+    column-count: ;
+}
+blockquote{
+    text-align: justify;
+}
+ol{
+    color:black
+
+}
+.hidden-list{
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    border:1px solid #ccc;
+    list-style-type: none;
+    margin: 0;
+    color: rgb(241, 20, 101);
+}
+li:hover .hidden-list{
+    display:block;
+}
+.testimonials{
+    color: rgb(181, 22, 138);
+}
+small{
+    color:rgb(131, 7, 247);
+    background-color: bisque;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 1000;
+}
+/*
+.row{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.left{
+    flex:1;
+    margin-right: 20px;
+    text-align: left;
+    border : 1px solid #ccc;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+.right{
+    flex:1;
+    margin-left: 20px;
+    text-align: right;
+border:1px solid #ccc;
+padding: 20px;
+background-color: #f1f1f1;
+border-radius: 8px;
+
+}
+h1 .row{
+    font-size: 2rem;
+    color:#333;
+    margin-bottom: 10px;
+
+}
+ul,ol .row{
+    margin: 10px 0;
+    padding-left: 20px;
+}
+blockquote{
+    font-style: italic;
+    color: #666;
+    margin:10px 0;
+    padding-left: 20px;
+    border-left: 4px solid #ccc;
+
+}
+.cta button{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+
+}*/
+.row{
+    height: auto;
+    border: 2px solid #fff;
+
+}
+.right{
+    padding: 20px;
+    margin: 20px;
+    border:2px solid #ccc;
+    background-color: #fff; 
+}
+.left{
+    padding: 20px;
+    margin: 20px;
+    border:2px solid #ccc; 
+    background-color:#fff;
+}
+.right h1, p{
+    color: rgb(34, 34, 185);
+
+}
+.right small{
+    color: #666;
+    font-style: italic;
+    font-weight: 500;
+}
+h1{
+    color:blue;
+}
+.container{
+   column-count: 3;
+   display:flex;
+   justify-content: space-between; 
+   padding: 20px;
+   margin: 20px;
+   border:2px solid black;
+}  
+
+
+/* video {
+    max-width: 50%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+} */
+#play_video{
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    
+}
+#search_box_btn{
+    height:12px; 
+    width: 12px;
+    /* border:2px solid blue; */
+    background-color: blue;
+    margin:0%;
+    padding: 0%;
+    border: black;
+    border-radius: 50%;   
+    display: inline;
+    position: relative; 
+    gap: 0%;
+    margin-left: -2px;
+
+
+}
+#light{
+    background-color: white;
+    /* height: 16px;
+    width: 16px; */
+    display: inline;
+    
+}
+#dark{
+    background-color: #000000;
+    /* height: 16px;
+    width: 16px; */
+    display: inline;
+    color: #ddd;
+
+   
+}
+
+#brown{
+    background-color: #b15205;
+    /* height: 16px;
+    width: 16px; */
+    display: inline;
+    color: #ddd;
+}
+
+#img_light{
+    height:12px; 
+    width: 12px;
+    /* border:2px solid blue; */
+    background-color: blue;
+    margin:0%;
+    padding: 0%;
+    border: black;
+    border-radius: 50%;    
+
+
+}
+#img_dark{
+    height:12px; 
+    width: 12px;
+    /* border:2px solid blue; */
+    background-color: blue;
+    margin:0%;
+    padding: 0%;
+    border: black;
+    border-radius: 50%;    
+
+}
+#background_theme{
+    border: 2px solid blue;
+    background:firebrick;
+    display: inline-block;
+    width: 200px;
+    justify-content: space-evenly;
+    padding-left: ;
+    white-space:inherit;
+    margin-left: 15px;
+    
+
+
+}
+.themes{
+    /* align-items: end; */
+    /* position:relative; */
+    /* display: flex; */
+    margin-left: 50px;
+    
+}
+.search-tab{
+    /* justify-content: space-between; */
+    /* margin-inline: 20px;
+     */
+    text-align: left;
+    align-self: first baseline;
+}
+td{
+    border: 2px solid black;
+
+}
+tr{
+    border: 2px ;
+}
+
+.hover-btn li:hover{
+    display: inline;
+    background-color: #f0f0f0;
+    color: black;
+    
+
+}

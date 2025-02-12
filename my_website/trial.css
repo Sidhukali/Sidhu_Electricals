@@ -1,0 +1,178 @@
+*{
+	/* selects the entire code */
+
+/*	box-sizing : border-box; */
+	margin: auto;
+}
+.head{
+	padding : 16px;
+	border : solid;
+	border-color : brown;
+	background-color : maroon;
+	height : 400px;
+	
+}
+
+.logo{
+	text-align : center;
+}
+
+#logo{
+	height : 85px;
+	width : 85px;
+	border-radius : 50%;
+	border : solid;
+	text-align : right;
+	position : right;
+}
+body{
+	padding : 16px;
+	background-color : #000; /* red=0 green=0 blue=0;*/
+	text-align: center;
+	margin: auto;
+}
+
+#contentArea{
+	border : solid;
+	background-color : indigo;
+	padding : 16px;
+	margin : 0px;
+	display : ;
+}
+
+
+
+
+#keyLogger {
+	border: solid;
+	border-color : black;
+	background-color : pink;
+	padding : 16px;
+	margin : 13px;
+	margin-left : 8em;
+	margin-right : 8em;
+}
+.type{
+	background-color : black;
+	border : solid;
+	border-color : black;
+	padding : 16px;
+	color: #05f105;;
+	text-align : center;	
+	border-radius : 50%;
+	margin-left : 16rem;
+	margin-right : 16rem;
+	
+}
+#logger{
+	width : 350px;
+	height : 150px;
+	background : black;
+	color : darkgreen;
+	padding-left : 24px;
+	margin : 2px;
+	margin-left : 5em; 
+	text-align : left;
+	display : inline-block;
+}
+
+#void{
+	display : inline;
+	padding-left : 2em;
+}
+.box{
+	width : 400px;
+	height : 400px;
+	background : brown;
+	background-position : middle;
+	padding : 16px;
+	border : solid;
+	position : center;
+	margin-top : 13px;
+	margin-bottom : 13px;
+	margin-left : 5rem;
+	margin-right : 5em;
+	text-align : 0px;
+}
+
+.child{
+	width : 200px;
+	height : 200px;
+	background : royalblue;
+	padding : 16px;
+	margin : 2em;
+	margin-left : 5em;
+	border : dashed;
+	
+}
+
+#subchild{
+	width : 75px;
+	height : 75px;
+	background : maroon;
+	background-position : middle;
+	border : dotted;
+	padding : 16px;
+	margin : 2em;
+	box-sizing : none;
+}
+
+#bullet {
+	background : #132f;
+	border-radius : 50%;
+	width : 45px;
+	height : 45px;
+	text-align : center;
+	font-size : 36px;
+	margin : 16px;
+	
+	
+}
+
+input#username2{
+	margin-left : auto;
+}
+form{
+	border : solid;
+	box-sizing : border-box ;
+	padding : 16px;
+	margin : 2em;
+	text-align : center;
+	background-color : purple;
+}
+
+.formContent{
+	padding:16px;
+	margin: auto;
+	color : blue;
+	background-color : black;
+	border : solid;
+	width : 200;
+	margin-top : 2px;
+
+}
+input{
+	border-color: snow;
+	background-color : li;
+		
+
+}
+
+
+input:invalid{
+	border-color:red;
+}
+
+
+lable{
+	padding-right : 16px;
+	display : block;
+	color: orange;
+	font-size : 22px;
+	font-weight: 600px;
+
+}
+h4{
+	text-align:center;
+	margin-bottom : 0px;
+}

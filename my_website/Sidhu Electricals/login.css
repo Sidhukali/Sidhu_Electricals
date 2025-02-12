@@ -1,0 +1,30 @@
+html{
+    padding: 16px;
+    margin: 16px;
+    align-items: center;
+    text-align:justify;
+}
+form{
+    color: blue;
+    padding: 20px;
+    margin : 20px;
+    border: 2px solid black;
+    display :;
+    justify-content: center;
+}
+#login h1{
+    text-align: center;
+    font-weight: normal;
+}
+#logger{
+    border:2px solid black;
+    background-color: black;
+    color: green;
+    align-self: center;
+    height: 50px;
+    width: 400px;
+    display: flex;
+    place-content: center;
+    padding-left: 80px;
+
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waffle Menu</title>
+    <link rel="stylesheet" href="waffle.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Waffle Button -->
+    <button id="waffle-btn" class="waffle-button">
+        <i class="fas fa-th"></i> <!-- Dashed Icon -->
+    </button>
+
+    <!-- Dropdown Menu -->
+    <div id="dropdown-menu" class="dropdown hidden">
+        <input type="text" id="search-box" placeholder="Search apps...">
+        
+        <ul id="menu-items">
+            <li><i class="fas fa-envelope"></i> Email</li>
+            <li><i class="fas fa-cloud"></i> Cloud Storage</li>
+            <li><i class="fas fa-calendar"></i> Calendar</li>
+            <li><i class="fas fa-cogs"></i> Settings</li>
+        </ul>
+    </div>
+
+    <script src="waffle.js"></script>
+</body>
+</html>

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://operavps.com/docs/enable-wifi-on-kali-linux/ -->
+<html lang="en" translate="no"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="origin-trial" content="A/kargTFyk8MR5ueravczef/wIlTkbVk1qXQesp39nV+xNECPdLBVeYffxrM8TmZT6RArWGQVCJ0LRivD7glcAUAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZzIiLCJleHBpcnkiOjE3NDIzNDIzOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  /*  <script type="text/javascript" async="" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/destination"></script><script type="text/javascript" async="" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/js"></script><script async="" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/gtm.js"></script><script type="text/javascript" async="" charset="utf-8" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-1TUNDcvWQ6Ms5xMd7JPWn58lx7KCTI21j1WEYm2E+AxZi1T3AogJVuz8TFKxqipQ"></script><script src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/main.js"></script> */
+<!-- <style type="stylesheet" href="stylles.css"></style>   -->
+  <script type="text/javascript" async="" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/f.txt"></script><meta name="google" content="notranslate"></head>
+
+<body>
+    <div id="dark-bg"></div>
+    <div class="wrapper">
+
+
+        
+        <header class="header">
+                        
+            <div class="header-bg">
+                <menu class="main-menu m-0">
+                    <nav class="navbar navbar-expand-xl">
+                        <div class="container">
+                            <div rel="home" class="navbar-brand d-flex justify-content-between align-items-center">
+
+                                <div class="brand-image">
+                                    <img src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/logo.svg" alt="OperaVPS">
+                                </div>
+                                <div class="brand-text">
+                                    <a href="https://operavps.com/">
+                                        <div class="brand-title">
+                                            <p>OPERA<span class="main-color">VPS</span></p>
+                                        </div>
+                                        <div class="brand-subtitle">
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="d-flex">
+                                <div class="login-btn-sm d-xl-none d-block me-2">
+
+
+                                    <a href="https://operavps.com/my/clientarea.php" class="btn btn-outline-main btn-56">Dashboard</a>
+
+                                </div>
+                                <button id="header-menu-mobile-open-btn" class="navbar-toggler btn-outline-main" type="button">
+                                    <span class="fal fa-bars"></span>
+                                </button>
+
+                            </div>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <span id="header-menu-mobile-close-btn" class="fal fa-times" role="button"></span>
+                                <ul id="menu-header" class="navbar-nav m-auto my-0 mb-md-0 "><li id="menu-item-5074" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown nav-item nav-item-5074"><a href="https://operavps.com/vps-server/" class="nav-link  dropdown-toggle" data-bs-toggle="" aria-haspopup="true" aria-expanded="false">VPS Hosting</a>
+<ul class="dropdown-menu  depth_0">
+	<li id="menu-item-5078" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-5078"><a href="https://operavps.com/windows-vps/" class="dropdown-item ">Windows VPS</a></li>
+	<li id="menu-item-5077" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-5077"><a href="https://operavps.com/linux-vps-hosting/" class="dropdown-item ">Linux VPS</a></li>
+	<li id="menu-item-5079" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-5079"><a href="https://operavps.com/mikrotik-vps/" class="dropdown-item ">MikroTik VPS</a></li>
+	<li id="menu-item-5080" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-5080"><a href="https://operavps.com/cpanel-vps/" class="dropdown-item ">Cpanel VPS</a></li>
+</ul>
+</li>
+<li id="menu-item-5073" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-5073"><a href="https://operavps.com/buy-rdp/" class="nav-link ">Buy RDP</a></li>
+<li id="menu-item-9301" class="menu-item menu-item-type-post_type menu-item-object-page nav-item nav-item-9301"><a href="https://operavps.com/dedicated-server/" class="nav-link ">Dedicated Server</a></li>
+<li id="menu-item-20201" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-20201"><a href="https://operavps.com/locations/" class="nav-link ">Locations</a></li>
+<li id="menu-item-19156" class="menu-item menu-item-type-post_type menu-item-object-page nav-item nav-item-19156"><a href="https://operavps.com/kb/" class="nav-link ">Knowledge Base</a></li>
+</ul>                                <div class="login-btn d-xl-block d-none">
+                                    <div class="panel-btn">
+                                        <a class="btn signup-btn" target="_blank" href="https://operavps.com/my/register.php">Sign up</a>
+                                        <a class="btn btn-outline-main btn-56" target="_blank" href="https://operavps.com/my/clientarea.php">Dashboard</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </nav>
+                            </menu>
+               
+                  
+                                    <section id="page-title-section" class="section single">
+                        <div class="container">
+                            <div class="row">
+
+                            </div>
+                        </div>
+
+                    </section>
+                            </div>
+        </header>
+
+        <!-- Start Main Content -->
+                                            <main class="m-100">
+                            <div class="container main">
+
+    <div class="row">
+        <div class="col-md-11">
+            <div class="single-post">
+                <div class="row">
+                    <article class="col-xl-9 mb-xl-0 mb-4">
+                        <div class="post-content">
+                                                                <div class="post-image">
+
+                                                                                    <img width="871" height="426" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/enable-wifi-on-kali-linux-1.png" class="w-100 wp-post-image" alt="How to Enable WiFi in Kali Linux" decoding="async" fetchpriority="high">                                                                            </div>
+                                    <div class="post-intro">
+
+
+                                        <div class="d-md-flex justify-content-between mb-3 md-mb-5">
+
+                                            <div class="post-date justify-content-end order-md-1 mb-md-0 mb-3">
+                                                <span class="pe-1">16 March, 2024</span>
+                                                <span>by</span>
+                                                <span class="post-author"><a href="https://operavps.com/author/liosa-f/" title="Posts by Liosa F" rel="author">Liosa F</a></span>
+                                            </div>
+                                            <div class="post-cat justify-content-start">
+                                                                                                
+
+                                            </div>
+
+                                        </div>
+                                        <div class="page-title">
+                                            <h1 class="common-title"> How to Enable WiFi in Kali Linux</h1>
+                                        </div>
+                                        <div class="post-text">
+                                            <p>There are two ways to enable WiFi in <a href="https://operavps.com/blog/kali-linux-definition/" title="Kali Linux">Kali Linux</a>. You can either use the Graphical User Interface (GUI) or use the terminal on Kali to enable WiFi.</p>
+<p>Enabling WiFi in Kali is easier if you go with the GUI solution. You can enable WiFi in famous Linux GUI like KDE, GNOME, and Xfce.</p>
+<p>And you can use the nmcli, nmtui, and <a href="https://operavps.com/blog/what-is-ip-address/" title="ip">ip</a> commands in the terminal to enable the WiFi in Kali.<br>
+<span id="more-15873"></span></p>
+<div id="ez-toc-container" class="ez-toc-v2_0_68_1 counter-hierarchy ez-toc-counter ez-toc-white ez-toc-container-direction">
+<div class="ez-toc-title-container">
+<p class="ez-toc-title ">Table of Contents</p>
+<span class="ez-toc-title-toggle"><a href="https://operavps.com/docs/enable-wifi-on-kali-linux/#" class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle ez-toc-loaded" aria-label="Toggle Table of Content"><span class="ez-toc-js-icon-con"><span class=""><span class="eztoc-hide" style="display:none;">Toggle</span><span class="ez-toc-icon-toggle-span"><svg style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg" class="list-377408" width="20px" height="20px" viewBox="0 0 24 24" fill="none"><path d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z" fill="currentColor"></path></svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013" xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" viewBox="0 0 24 24" version="1.2" baseProfile="tiny"><path d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z"></path></svg></span></span></span></a></span></div>
+<nav><ul class="ez-toc-list ez-toc-list-level-1 eztoc-toggle-hide-by-default" style="display: none;"><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-1" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#Prerequisite_for_enabling_wifi_on_Kali_Linux" title="Prerequisite for enabling wifi on Kali Linux">Prerequisite for enabling wifi on Kali Linux</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-2" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#Enable_WiFi_in_Kali_Linux_via_GUI" title="Enable WiFi in Kali Linux via GUI">Enable WiFi in Kali Linux via GUI</a><ul class="ez-toc-list-level-3"><li class="ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-3" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#First_step_Find_the_network_icon" title="First step: Find the network icon">First step: Find the network icon</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-4" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#Second_step_Enable_wifi" title="Second step: Enable wifi">Second step: Enable wifi</a></li></ul></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-5" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#How_to_disable_wifi_in_Kali_via_GUI" title="How to disable wifi in Kali via GUI">How to disable wifi in Kali via GUI</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-6" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#Enable_WiFi_Network_in_Kali_Linux_through_the_terminal" title="Enable WiFi Network in Kali Linux through the terminal">Enable WiFi Network in Kali Linux through the terminal</a><ul class="ez-toc-list-level-3"><li class="ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-7" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#1_Connect_Kali_Linux_to_WiFi_via_nmcli_command" title="1. Connect Kali Linux to WiFi via nmcli command">1. Connect Kali Linux to WiFi via nmcli command</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-8" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#2_Connect_to_WiFi_in_Kali_Linux_via_nmtui_command" title="2. Connect to WiFi in Kali Linux via nmtui command">2. Connect to WiFi in Kali Linux via nmtui command</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-9" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#3_Connect_to_the_WiFi_network_through_the_ip_command" title="3. Connect to the WiFi network through the ip command">3. Connect to the WiFi network through the ip command</a></li></ul></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-10" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#How_to_disable_wifi_in_Kali_via_terminal" title="How to disable wifi in Kali via terminal">How to disable wifi in Kali via terminal</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-11" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#How_to_list_wifi_networks_through_the_terminal" title="How to list wifi networks through the terminal">How to list wifi networks through the terminal</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-12" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#How_to_fix_wifi_not_showing_in_Kali" title="How to fix wifi not showing in Kali">How to fix wifi not showing in Kali</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-13" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#How_to_Enable_WiFi_Adapter_in_Kali_Linux" title="How to Enable WiFi Adapter in Kali Linux">How to Enable WiFi Adapter in Kali Linux</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-14" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#How_to_enable_wlan0_in_Kali_Linux_VMwareVirtualbox" title="How to enable wlan0 in Kali Linux VMware/Virtualbox?">How to enable wlan0 in Kali Linux VMware/Virtualbox?</a><ul class="ez-toc-list-level-3"><li class="ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-15" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#Step_one_Download_the_wireless_adapter_driver" title="Step one: Download the wireless adapter driver">Step one: Download the wireless adapter driver</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-16" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#Step_two_Change_the_directory_in_the_terminal" title="Step two: Change the directory in the terminal">Step two: Change the directory in the terminal</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-17" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#Step_three_Unload_and_load_the_driver" title="Step three: Unload and load the driver">Step three: Unload and load the driver</a></li></ul></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-18" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#Why_is_Kali_Linux_WiFi_not_Working" title="Why is Kali Linux WiFi not Working?">Why is Kali Linux WiFi not Working?</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-19" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#How_to_install_WiFi_driver_in_Kali_Linux_without_Internet" title="How to install WiFi driver in Kali Linux without Internet?">How to install WiFi driver in Kali Linux without Internet?</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-20" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#How_to_check_WiFi_adapter_in_Kali_Linux" title="How to check WiFi adapter in Kali Linux?">How to check WiFi adapter in Kali Linux?</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-21" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#FAQ" title="FAQ">FAQ</a><ul class="ez-toc-list-level-3"><li class="ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-22" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#What_command_should_we_use_to_check_available_WiFi_networks" title="What command should we use to check available WiFi networks?">What command should we use to check available WiFi networks?</a></li></ul></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-23" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#Conclusion" title="Conclusion">Conclusion</a></li></ul></nav></div>
+<h2><span class="ez-toc-section" id="Prerequisite_for_enabling_wifi_on_Kali_Linux" ez-toc-data-id="#Prerequisite_for_enabling_wifi_on_Kali_Linux"></span>Prerequisite for enabling wifi on Kali Linux<span class="ez-toc-section-end"></span></h2>
+<p>You need some prerequisites to connect Kali Linux to wifi. These prerequisites are:</p>
+<ul>
+<li>A system or <a href="https://operavps.com/vps-server/" target="_blank" rel="noopener">VPS server</a> With Kali Linux or virtualization software like VMware and VirtualBox with the Kali distribution</li>
+<li>A root user logged in</li>
+</ul>
+<h2><span class="ez-toc-section" id="Enable_WiFi_in_Kali_Linux_via_GUI" ez-toc-data-id="#Enable_WiFi_in_Kali_Linux_via_GUI"></span>Enable WiFi in Kali Linux via GUI<span class="ez-toc-section-end"></span></h2>
+<p>The first way to turn on wifi in Kali Linux is using the GUI. The ways to connect to WiFi in KDE, GNOME, and XFCE desktops are almost the same.</p>
+<p>The following steps depict the way to connect Kali Linux to wifi.</p>
+<h3><span class="ez-toc-section" id="First_step_Find_the_network_icon" ez-toc-data-id="#First_step_Find_the_network_icon"></span>First step: Find the network icon<span class="ez-toc-section-end"></span></h3>
+<p>Find the network icon at the top right corner of your Kali screen and right-click on it.</p>
+<p><img decoding="async" class="size-full wp-image-21237 aligncenter" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/enable-wifi-on-kali-linux.296.jpg" alt="finding the network icon in Kali" width="800" height="18"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3><span class="ez-toc-section" id="Second_step_Enable_wifi" ez-toc-data-id="#Second_step_Enable_wifi"></span>Second step: Enable wifi<span class="ez-toc-section-end"></span></h3>
+<p>Now that a small window has appeared select “Enable Wi-Fi” from the options.</p>
+<p><img decoding="async" class="aligncenter wp-image-15877 size-full" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/Enable-WiFi-on-Kali-Linux0-2.jpg" alt="enable the wifi in Kali" width="246" height="192"></p>
+<p>After enabling the WiFi, you can choose any wireless network you want to connect to from the available WiFis.</p>
+<p>Then, you will be asked to provide the password of the wifi network in order to connect to it.</p>
+<p>Also, you can right-click on the Network icon and select “Connection Information” to review the connection details.</p>
+<h2><span class="ez-toc-section" id="How_to_disable_wifi_in_Kali_via_GUI" ez-toc-data-id="#How_to_disable_wifi_in_Kali_via_GUI"></span>How to disable wifi in Kali via GUI<span class="ez-toc-section-end"></span></h2>
+<p>To disable the WiFi through GUI in Kali Linux, find the network icon, right-click on it, and uncheck the “Enable Wi-Fi” box.</p>
+<h2><span class="ez-toc-section" id="Enable_WiFi_Network_in_Kali_Linux_through_the_terminal" ez-toc-data-id="#Enable_WiFi_Network_in_Kali_Linux_through_the_terminal"></span>Enable WiFi Network in Kali Linux through the terminal<span class="ez-toc-section-end"></span></h2>
+<p>You can use various commands to connect to the desired WiFi in Kali Linux. We will teach different methods for connecting to wifi in Kali using the terminal.</p>
+<h3><span class="ez-toc-section" id="1_Connect_Kali_Linux_to_WiFi_via_nmcli_command" ez-toc-data-id="#1_Connect_Kali_Linux_to_WiFi_via_nmcli_command"></span>1. Connect Kali Linux to WiFi via nmcli command<span class="ez-toc-section-end"></span></h3>
+<p>Using the nmcli command is a simple and practical method to control the NetworkManager and connect to any network.</p>
+<p>To run the nmcli command, you need to enter the network name and password in the following format:</p>
+<pre><code class="language- hljs language-less"><span class="hljs-selector-tag">nmcli</span> <span class="hljs-selector-tag">d</span> <span class="hljs-selector-tag">wifi</span> <span class="hljs-selector-tag">connect</span> <span class="hljs-selector-attr">[The desired network name ]</span> <span class="hljs-selector-tag">password</span> <span class="hljs-selector-attr">[The desired network password]</span></code></pre>
+<p>You will be connected to the desired network by executing the above command.</p>
+<p>If you need help with the nmcli command, you can refer to the <a href="https://linux.die.net/man/1/nmcli" target="_blank" rel="nofollow noopener">nmcli command’s web page</a>.</p>
+<h3><span class="ez-toc-section" id="2_Connect_to_WiFi_in_Kali_Linux_via_nmtui_command" ez-toc-data-id="#2_Connect_to_WiFi_in_Kali_Linux_via_nmtui_command"></span>2. Connect to WiFi in Kali Linux via nmtui command<span class="ez-toc-section-end"></span></h3>
+<p>The nmtui command, like the nmcli command, enables you to control the NetworkManager. To connect to the desired WiFi network, type the following command:</p>
+<pre><code class="language- hljs language-undefined">nmtui</code></pre>
+<p>After running the command, the menu shown in the image below will be displayed for you.</p>
+<p>You must select the “Activate a Connection” option using the keyboard and then press the Enter button.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter wp-image-15879 size-full" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/Enable-WiFi-on-Kali-Linux0-6.jpg" alt="activate a connection in Kali" width="779" height="463" srcset="https://operavps.com/wp-content/uploads/2022/12/Enable-WiFi-on-Kali-Linux0-6.jpg 779w, https://operavps.com/wp-content/uploads/2022/12/Enable-WiFi-on-Kali-Linux0-6-300x178.jpg 300w, https://operavps.com/wp-content/uploads/2022/12/Enable-WiFi-on-Kali-Linux0-6-768x456.jpg 768w" sizes="(max-width: 779px) 100vw, 779px"></p>
+<p>In the next menu, you will see the available networks. Select your desired option using the keyboard and then press Enter.</p>
+<p>Select the Back option after connecting to the desired network and press Enter.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter wp-image-15880 size-full" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/Enable-WiFi-on-Kali-Linux0-7.jpg" alt="connect to the network in Kali" width="779" height="478" srcset="https://operavps.com/wp-content/uploads/2022/12/Enable-WiFi-on-Kali-Linux0-7.jpg 779w, https://operavps.com/wp-content/uploads/2022/12/Enable-WiFi-on-Kali-Linux0-7-300x184.jpg 300w, https://operavps.com/wp-content/uploads/2022/12/Enable-WiFi-on-Kali-Linux0-7-768x471.jpg 768w" sizes="(max-width: 779px) 100vw, 779px"></p>
+<p>To exit the nmtui command prompt, select Quit and press Enter.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter wp-image-15881 size-full" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/Enable-WiFi-on-Kali-Linux0-8.jpg" alt="quit the “nmtui” command prompt" width="779" height="475" srcset="https://operavps.com/wp-content/uploads/2022/12/Enable-WiFi-on-Kali-Linux0-8.jpg 779w, https://operavps.com/wp-content/uploads/2022/12/Enable-WiFi-on-Kali-Linux0-8-300x183.jpg 300w, https://operavps.com/wp-content/uploads/2022/12/Enable-WiFi-on-Kali-Linux0-8-768x468.jpg 768w" sizes="(max-width: 779px) 100vw, 779px"></p>
+<h3><span class="ez-toc-section" id="3_Connect_to_the_WiFi_network_through_the_ip_command" ez-toc-data-id="#3_Connect_to_the_WiFi_network_through_the_ip_command"></span>3. Connect to the WiFi network through the ip command<span class="ez-toc-section-end"></span></h3>
+<p>Another way to connect to a WiFi network in Kali Linux is to use the ip command.</p>
+<p>To access the desired WiFi, enter the following command in the terminal environment:</p>
+<pre><code class="language- hljs language-ruby"><span class="hljs-variable">$ </span>ip a
+</code></pre>
+<p>Also, to enable WiFi by Backupping your desired adapter, run the following command:</p>
+<pre><code class="language- hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">sudo ip <span class="hljs-built_in">link</span> <span class="hljs-built_in">set</span> dev [name of desired WiFi ] up</span></code></pre>
+<p>You can run the “ip” command again to check the WiFi connection.</p>
+<h2><span class="ez-toc-section" id="How_to_disable_wifi_in_Kali_via_terminal" ez-toc-data-id="#How_to_disable_wifi_in_Kali_via_terminal"></span>How to disable wifi in Kali via terminal<span class="ez-toc-section-end"></span></h2>
+<p>If you want to disable your WiFi connection in Kali Linux through the terminal, the following command is of help:</p>
+<pre><code class="language- hljs language-shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">sudo ip <span class="hljs-built_in">link</span> <span class="hljs-built_in">set</span> dev [name of desired WiFi ] down</span></code></pre>
+<h2><span class="ez-toc-section" id="How_to_list_wifi_networks_through_the_terminal" ez-toc-data-id="#How_to_list_wifi_networks_through_the_terminal"></span>How to list wifi networks through the terminal<span class="ez-toc-section-end"></span></h2>
+<p>If you need to list the available wifi networks via the terminal, this is the command you need:</p>
+<pre><code class="language- hljs language-nginx"><span class="hljs-attribute">iwlist</span> wlan0 scan</code></pre>
+<p>&nbsp;</p>
+<p><img loading="lazy" decoding="async" class="size-full wp-image-21164 aligncenter" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/Enable-WiFi-on-Kali-Linux0-4-1-1.jpg" alt="list WiFis in Kali through terminal" width="800" height="405"></p>
+<p>In case you need the ESSID (Extended Service Set Identifier) of the available networks, you can run the following command:</p>
+<pre><code class="language- hljs language-perl">iwlist wlan<span class="hljs-number">0</span> scan | <span class="hljs-keyword">grep</span> ESSID</code></pre>
+<p>&nbsp;</p>
+<p><img loading="lazy" decoding="async" class="size-full wp-image-21165 aligncenter" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/Enable-WiFi-on-Kali-Linux0-5-1.jpg" alt="get the ESSID (Extended Service Set Identifier) of available networks" width="800" height="189"></p>
+<h2><span class="ez-toc-section" id="How_to_fix_wifi_not_showing_in_Kali" ez-toc-data-id="#How_to_fix_wifi_not_showing_in_Kali"></span>How to fix wifi not showing in Kali<span class="ez-toc-section-end"></span></h2>
+<p>This problem is not common in Kali Linux, but if you encounter this issue, you can use the following command to fix it:</p>
+<pre><code class="language- hljs language-nginx"><span class="hljs-attribute">sudo</span> apt install kali-linux-wireless</code></pre>
+<p>Of course, this problem may be related to the failure of your wireless card, so it is better to identify your network device name first so that you can make the necessary changes:</p>
+<pre><code class="language- hljs language-undefined">iwconfig</code></pre>
+<p>After identifying the name of your network device, run the following command:</p>
+<pre><code class="language- hljs language-less"><span class="hljs-selector-tag">ifconfig</span> <span class="hljs-selector-attr">[wireless card name ]</span> <span class="hljs-selector-tag">up</span></code></pre>
+<h2><span class="ez-toc-section" id="How_to_Enable_WiFi_Adapter_in_Kali_Linux" ez-toc-data-id="#How_to_Enable_WiFi_Adapter_in_Kali_Linux"></span>How to Enable WiFi Adapter in Kali Linux<span class="ez-toc-section-end"></span></h2>
+<p>Disabling Wifi Adapter may be one of the reasons why you cannot see the wireless device and available networks in the list.</p>
+<p>To enable the Wi-Fi adapter in Kali Linux, open the Kali Linux terminal environment and execute the following command:</p>
+<pre><code class="language- hljs language-vim">sudo ifconfig wlan0 <span class="hljs-keyword">up</span></code></pre>
+<p>By running this command, you should access a list of available networks. Otherwise, it is better to restart the Kali Linux operating system.</p>
+<p>The WiFi adapter is used when connecting to the WiFi network. So you must enable the Kali Linux Wifi and enter the Wifi network password to connect to it in the same.</p>
+<p>Kali Linux may not recognize the wireless adapter in virtual environments like VMware and Virtualbox. Using an external adapter can solve this common concern.</p>
+<p>If executing the provided command and restarting the Kali Linux system does not activate your WiFi adapter, consider using an external adapter.</p>
+<p>Wireless adapter enhances Kali Linux WiFi on physical systems, which is unnecessary for VMware and Virtualbox.</p>
+<h2><span class="ez-toc-section" id="How_to_enable_wlan0_in_Kali_Linux_VMwareVirtualbox" ez-toc-data-id="#How_to_enable_wlan0_in_Kali_Linux_VMwareVirtualbox"></span>How to enable wlan0 in Kali Linux VMware/Virtualbox?<span class="ez-toc-section-end"></span></h2>
+<p>Follow this method if you have run your Kali Linux on VMware or Virtualbox and have trouble connecting to the wifi.</p>
+<h3><span class="ez-toc-section" id="Step_one_Download_the_wireless_adapter_driver" ez-toc-data-id="#Step_one_Download_the_wireless_adapter_driver"></span>Step one: Download the wireless adapter driver<span class="ez-toc-section-end"></span></h3>
+<p>Download the “compat-wireless” file directly from the <a href="https://mirror2.openwrt.org/sources/compat-wireless-2010-06-28.tar.bz2" target="_blank" rel="nofollow noopener">download link</a>. Then, go to the directory where it is saved and unzip the file.</p>
+<h3><span class="ez-toc-section" id="Step_two_Change_the_directory_in_the_terminal" ez-toc-data-id="#Step_two_Change_the_directory_in_the_terminal"></span>Step two: Change the directory in the terminal<span class="ez-toc-section-end"></span></h3>
+<p>First, switch to the root user using the command below:</p>
+<pre><code class="language- hljs language-ruby"><span class="hljs-variable">$ </span>sudo su</code></pre>
+<p><img loading="lazy" decoding="async" class="size-full wp-image-21166 aligncenter" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/enable-wifi-on-kali-linux.1.jpg" alt="change to sudo user in terminal" width="800" height="542"></p>
+<p>Now, change the directory to where the file has been downloaded. Here, we switch it to the Downloads directory using this command:</p>
+<pre><code class="language- hljs language-powershell"><span class="hljs-built_in">cd</span> Downloads</code></pre>
+<p><img loading="lazy" decoding="async" class="size-full wp-image-21167 aligncenter" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/enable-wifi-on-kali-linux.2.jpg" alt="change directory to Downloads" width="800" height="552"></p>
+<p>Then, move to the directory where the file has been extracted. The command will be:</p>
+<pre><code class="language- hljs language-apache"><span class="hljs-attribute">cd</span> compat-wireless-<span class="hljs-number">2010</span>-<span class="hljs-number">06</span>-<span class="hljs-number">28</span></code></pre>
+<p><img loading="lazy" decoding="async" class="size-full wp-image-21168 aligncenter" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/enable-wifi-on-kali-linux.3.jpg" alt="change directory to compat-wireless-2010-06-28" width="800" height="542"></p>
+<p><span style="font-weight: 400;">The compat-wireless-2010-06-28 is the extraction directory.</span></p>
+<h3><span class="ez-toc-section" id="Step_three_Unload_and_load_the_driver" ez-toc-data-id="#Step_three_Unload_and_load_the_driver"></span>Step three: Unload and load the driver<span class="ez-toc-section-end"></span></h3>
+<p>In this directory, type the following commands respectively:</p>
+<pre><code class="language- hljs language-go"><span class="hljs-built_in">make</span> unload</code></pre>
+<p><img loading="lazy" decoding="async" class="size-full wp-image-21169 aligncenter" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/enable-wifi-on-kali-linux.4.jpg" alt="make unload in the terminal" width="800" height="545"></p>
+<pre><code class="language- hljs language-go"><span class="hljs-built_in">make</span> load</code></pre>
+<p><img loading="lazy" decoding="async" class="size-full wp-image-21170 aligncenter" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/enable-wifi-on-kali-linux.8.jpg" alt="make load in the terminal" width="800" height="620"></p>
+<p>The Kali Linux not showing available wifi networks is fixed, and you can see the available wifis if you click on the network icon.</p>
+<p><img loading="lazy" decoding="async" class="size-full wp-image-21238 aligncenter" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/enable-wifi-on-kali-linux.26.jpg" alt="view available networks on Kali" width="800" height="620"></p>
+<p>&nbsp;</p>
+<p>Also, you can see the “wlan0” and “wlan1” enabled by typing the following command in the terminal:</p>
+<pre><code class="language- hljs language-undefined">iwconfig</code></pre>
+<p><img loading="lazy" decoding="async" class="size-full wp-image-21172 aligncenter" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/enable-wifi-on-kali-linux.7.jpg" alt="view wlan0 and wlan1 in Kali Linux" width="800" height="633"></p>
+<h2><span class="ez-toc-section" id="Why_is_Kali_Linux_WiFi_not_Working" ez-toc-data-id="#Why_is_Kali_Linux_WiFi_not_Working"></span>Why is Kali Linux WiFi not Working?<span class="ez-toc-section-end"></span></h2>
+<p>If you are experiencing connectivity issues, it’s likely due to incorrect network drive configuration or not having them installed.</p>
+<p>However, if your hardware is functioning properly and you still can’t connect, it could be because your network drives are outdated.</p>
+<p>You must click on the shell button on the bottom right side of the screen and find and update the desired software by typing “software and updates” in the search bar.</p>
+<h2><span class="ez-toc-section" id="How_to_install_WiFi_driver_in_Kali_Linux_without_Internet" ez-toc-data-id="#How_to_install_WiFi_driver_in_Kali_Linux_without_Internet"></span>How to install WiFi driver in Kali Linux without Internet?<span class="ez-toc-section-end"></span></h2>
+<p>If you do not have access to the internet and want to install the wifi driver, here is what you have to do:</p>
+<ul>
+<li>Run either of the commands below to identify your wifi adapter’s model.</li>
+</ul>
+<pre><code class="language- hljs language-undefined">lspci</code></pre>
+<pre><code class="language- hljs language-undefined">lsusb</code></pre>
+<ul>
+<li>Download the adapter’s driver on another system connected to the internet.</li>
+<li>Transfer the driver using a USB to your Kali Linux system.</li>
+<li>In the terminal, navigate to the directory where you have put the driver’s file and install it by the method mentioned earlier.</li>
+</ul>
+<p>Now you can check if your wifi in Kali Linux is working.</p>
+<h2><span class="ez-toc-section" id="How_to_check_WiFi_adapter_in_Kali_Linux" ez-toc-data-id="#How_to_check_WiFi_adapter_in_Kali_Linux"></span>How to check WiFi adapter in Kali Linux?<span class="ez-toc-section-end"></span></h2>
+<p>To check the WiFi adapter, open the terminal in Kali Linux and run:</p>
+<pre><code class="language- hljs language-undefined">airmon-ng</code></pre>
+<p>You will see the WiFi cards, for example, wlan0. To observe any card, here wlan0, run this command:</p>
+<pre><code class="language- hljs language-sql">airmon<span class="hljs-operator">-</span>ng <span class="hljs-keyword">start</span> wlan0</code></pre>
+<p>Its name will be changed to “wlan0mon” because it is in monitor mode.</p>
+<p>Now type the command below to list all the networks:</p>
+<pre><code class="language- hljs language-undefined">airodump-ng wlan0mon</code></pre>
+<p>You can stop observing by pressing the “ctrl” and “c” buttons, then running the command:</p>
+<pre><code class="language- hljs language-arduino">airmon-ng stop wlan0mon</code></pre>
+<p>Finally to reclaim your WiFi, run the:</p>
+<pre><code class="language- hljs language-nginx"><span class="hljs-attribute">systemctl</span> restart NetworkManager.service</code></pre>
+<h2><span class="ez-toc-section" id="FAQ" ez-toc-data-id="#FAQ"></span>FAQ<span class="ez-toc-section-end"></span></h2>
+<div id="sp_easy_accordion-1709641560"><div id="sp-ea-15874" class="sp-ea-one sp-easy-accordion" data-ex-icon="minus" data-col-icon="plus" data-ea-active="ea-click" data-ea-mode="vertical" data-preloader="" data-scroll-active-item="" data-offset-to-scroll="0"><div class="ea-card ea-expand sp-ea-single"><h3 class="ea-header"><span class="ez-toc-section" id="What_command_should_we_use_to_check_available_WiFi_networks" ez-toc-data-id="#What_command_should_we_use_to_check_available_WiFi_networks"></span><a class="collapsed" id="ea-header-158740" data-sptoggle="spcollapse" data-sptarget="#collapse158740" aria-controls="collapse158740" href="javascript:void(0)" aria-expanded="true" tabindex="0"><i class="ea-expand-icon ea-icon-expand-minus"></i> What command should we use to check available WiFi networks?</a><span class="ez-toc-section-end"></span></h3><div class="sp-collapse spcollapse collapsed show" id="collapse158740" data-parent="#sp-ea-15874" role="region" aria-labelledby="ea-header-158740"><div class="ea-body"><p>Nmcli is a command that allows you to control NetworkManager and provides information about the network status, so run the following command to scan WiFi networks:</p>
+<pre><code class="language- hljs language-nginx"><span class="hljs-attribute">nmcli</span> dev wifi</code></pre>
+</div></div></div><script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "FAQPage",
+	  "mainEntity": [{
+			"@type": "Question",
+			"name": "What command should we use to check available WiFi networks?",
+			"acceptedAnswer": {
+			  "@type": "Answer",
+			  "text": "Nmcli is a command that allows you to control NetworkManager and provides information about the network status, so run the following command to scan WiFi networks:
+nmcli dev wifi"
+			}
+		  }]
+	}
+	</script></div></div>
+<h2><span class="ez-toc-section" id="Conclusion" ez-toc-data-id="#Conclusion"></span>Conclusion<span class="ez-toc-section-end"></span></h2>
+<p>Kali wifi not working can sometimes happen on your system. The GUI and terminal/cmd solutions both help you fix the problem.</p>
+<p>We also provided the ways to check the WiFI adapter in Kali, install WiFi driver in Kali Linux without Internet and the way to to enable wlan0 in Kali Linux VMware/Virtualbox.</p>
+<p>Related Service :&nbsp;<a href="https://operavps.com/kali-linux-vps/">Buy Kali linux VPS</a></p>
+                                        </div>
+                                    </div>
+
+                                
+                        </div>
+                        <div class="post-navigation">
+                            <div class="row">
+                                                                <div class="col-md-6 mb-xl-0 mb-4">
+                                    <div class="prev-post text-start">
+                                        <div class="post-arrows">
+                                            <i class="far fa-long-arrow-left pe-2"></i>Previous                                                                                    </div>
+                                        <a href="https://operavps.com/docs/enable-ssh-on-linux/" rel="prev">How to Enable SSH to Connect to a Remote Server in Linux</a>                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="next-post">
+                                        <div class="post-arrows">                                            Next<i class="far fa-long-arrow-right ps-2"></i>                                        </div>
+                                        <a href="https://operavps.com/docs/install-java-linux/" rel="next">How to Install Java in Linux?</a>                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Start viewpoint -->
+                        <div class="post-comments">
+                                                            <div class="comments">
+                                    <div class="comments-area">
+    	<div id="respond" class="comments-form">
+		<div class="comments-form-header row no-gutters align-items-center"><div class="col-auto p-0"><span class="far fa-comment"></span></div><div class="col"><h2 class="title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://operavps.com/docs/enable-wifi-on-kali-linux/#respond" style="display:none;">Cancel reply</a></small></h2><p>Your email address will not be published. Required fields are marked.</p></div></div><form action="https://operavps.com/wp-comments-post.php" method="post" id="commentform" class="comment-form"><div class="form-group"><label for="comment">Message <span>*</span></label> <textarea class="form-control" id="comment" name="comment" rows="8" maxlength="65525" required="required" placeholder="Your comment will improve the progress of both of us ..."></textarea></div><div class="row"><div class="form-group col-md-6"><label for="author">Name <span>*</span></label> <input id="author" class="form-control" name="author" type="text" value="" size="30" maxlength="245" required="required" placeholder="John Alphabet"></div>
+<div class="form-group col-md-6"><label for="email">Email <span>*</span></label> <input id="email" class="form-control" name="email" type="text" value="" size="30" maxlength="100" required="required" placeholder="john.alphabet@example.com"></div>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+</div><p class="form-submit"><input name="submit" type="submit" id="submit" class="btn btn-success" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="15873" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><input type="hidden" name="GgKueOmxF" value="@hu1tSKLFo"><input type="hidden" name="TPRVzGNCcs" value="OqksReJg876vz3"></form>	</div><!-- #respond -->
+	    
+</div>
+
+<div id="comments" class="comments-area default-max-width show-avatars">
+
+
+</div>                                </div>
+                                                    </div>
+                        <!-- End viewpoint -->
+
+
+                    </article>
+
+                    <div class="col-xl-3">
+                        <aside class="right-sidebar">
+                            <form action="https://operavps.com/" method="get" class="searchform" autocomplete="off">
+            <input type="search" name="s" id="search" value="" class="form-control" placeholder="search" aria-label="search" aria-describedby="button-addon2">
+        
+    
+</form>                            <div class="aside-block mb-4">
+                                <!-- <h4 class="aside-block-title">Was this article helpful?</h4> -->
+
+                                
+<div class="helpful ">
+
+		<div class="helpful-header">
+		<h3 class="helpful-headline">Helpful</h3>	</div><!-- .helpful-header -->
+	
+	<div class="helpful-content" role="alert">
+		<span>Let us know if you liked the post. That’s the only way we can improve</span>
+	</div><!-- .helpful-content -->
+
+		<div class="helpful-controls">
+
+				<div>
+			<button class="helpful-pro helpful-button" type="button" data-value="pro" data-post="15873" data-instance="835" role="button">
+				Yes				<span class="helpful-counter">13</span>			</button>
+		</div>
+		
+				<div>
+			<button class="helpful-contra helpful-button" type="button" data-value="contra" data-post="15873" data-instance="835" role="button">
+				No				<span class="helpful-counter">2</span>			</button>
+		</div>
+		
+	</div><!-- .helpful-controls -->
+	
+	
+</div><!-- .helpful -->
+                            </div>
+
+
+                            <div class="aside-block promo-block mb-4">
+                                <img src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/aside-ssd.svg" alt="">
+                                <h4 class="aside-block-title">
+                                                                                                                Linux VPS                                    
+                                </h4>
+
+
+                                <p>
+                                                                                                                Pay for what you need with our scalable Linux VPS plans.                                    
+                                </p>
+                                                                                                    <a href="https://operavps.com/linux-vps-hosting/" class="col-12 btn mainbg-color text-white"> Get Linux VPS Now</a>
+                                                            </div>
+
+
+                        </aside>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Start sidebar1 -->
+        <!-- start gif part -->
+        <aside class="col-md-4">
+
+        </aside>
+        <!-- End sidebar2 -->
+    </div>
+</div>
+
+</main>
+<!-- End Main Content -->
+
+<!-- Start footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-body">
+            <div class="footer-menu">
+                <div class="row">
+                    <div class="col-lg-5 col-12">
+                        <div class="footer-widget">
+                            <div class="widget-body">
+                                <div class="widget-title">
+                                    <a class="footer-brand d-flex align-items-center" href="https://operavps.com/">
+
+                                        <div class="brand-image">
+                                            <img src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/logo.svg" alt="OperaVPS">
+                                        </div>
+                                        <div class="brand-text">
+                                            <div class="brand-title">
+                                                <p>OPERA<span class="main-color">VPS</span></p>
+                                            </div>
+                                            <div class="brand-subtitle">
+                                            </div>
+                                        </div>
+
+
+
+                                    </a>
+
+                                </div>
+                                <div class="about-footer">
+                                    <p>
+                                        As an advocate of environmental sustainability, OperaVPS is more than just a VPS provider. With their commitment to
+                                        eco-friendly practices, OperaVPS delivers reliable hosting solutions while minimizing their environmental impact.
+                                        Experience top-notch hosting services combined with a strong focus on environmental support at OperaVPS.
+                                        <span>
+                                            <span class="fa fa-leaf fa-fw"></span>
+                                        </span>
+                                    </p>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div id="first-menu" class="footer-menu-col dynamic-height-active" data-maxheight="263" data-itemheight="1178.5">
+                                    <aside id="nav_menu-2" class="widget widget_nav_menu footer-widget"><div class="widget-title"><span class="main-color">Product and Solution</span></div><div class="menu-footer-package-container"><ul id="menu-footer-package" class="menu" style="max-height: 263px;"><li id="menu-item-20337" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20337"><a href="https://operavps.com/vps-server/">VPS Server</a></li>
+<li id="menu-item-5089" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5089"><a href="https://operavps.com/buy-rdp/">Buy RDP</a></li>
+<li id="menu-item-22674" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22674"><a href="https://operavps.com/linux-vps-hosting/">Linux VPS</a></li>
+<li id="menu-item-5332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5332"><a href="https://operavps.com/windows-vps/">Windows VPS</a></li>
+<li id="menu-item-20434" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20434"><a href="https://operavps.com/windows-11-vps/">Windows 11 VPS</a></li>
+<li id="menu-item-22737" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22737"><a href="https://operavps.com/debian-vps/">Debian VPS</a></li>
+<li id="menu-item-22736" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22736"><a href="https://operavps.com/freebsd-vps/">FreeBSD VPS</a></li>
+<li id="menu-item-22738" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22738"><a href="https://operavps.com/centos-vps/">CentOS VPS</a></li>
+<li id="menu-item-22753" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22753"><a href="https://operavps.com/arch-linux-vps/">Arch Linux VPS</a></li>
+<li id="menu-item-5329" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5329"><a href="https://operavps.com/mikrotik-vps/">Mikrotik VPS</a></li>
+<li id="menu-item-9226" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9226"><a href="https://operavps.com/forex-vps/">Forex VPS</a></li>
+<li id="menu-item-22322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22322"><a href="https://operavps.com/forex-rdp/">Forex RDP</a></li>
+<li id="menu-item-5330" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5330"><a href="https://operavps.com/cpanel-vps/">CPanel VPS</a></li>
+<li id="menu-item-7997" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7997"><a href="https://operavps.com/bitcoin-vps/">Bitcoin VPS</a></li>
+<li id="menu-item-10574" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10574"><a href="https://operavps.com/perfect-money-vps/">Perfect Money VPS</a></li>
+<li id="menu-item-22234" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22234"><a href="https://operavps.com/credit-card-vps/">Buy VPS With Credit Card</a></li>
+<li id="menu-item-22178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22178"><a href="https://operavps.com/tether-vps/">Buy VPS with USDT</a></li>
+<li id="menu-item-10944" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10944"><a href="https://operavps.com/paypal-vps/">PayPal VPS</a></li>
+<li id="menu-item-22179" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22179"><a href="https://operavps.com/kali-linux-vps/">Kali Linux VPS</a></li>
+<li id="menu-item-20191" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20191"><a href="https://operavps.com/usa-vps/">USA VPS</a></li>
+<li id="menu-item-20281" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20281"><a href="https://operavps.com/uk-vps/">UK VPS</a></li>
+<li id="menu-item-21829" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21829"><a href="https://operavps.com/dubai-vps/">Dubai VPS</a></li>
+<li id="menu-item-22182" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22182"><a href="https://operavps.com/ubuntu-vps/">Ubuntu VPS</a></li>
+<li id="menu-item-22183" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22183"><a href="https://operavps.com/android-emulator-vps/">Android VPS</a></li>
+<li id="menu-item-21828" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21828"><a href="https://operavps.com/best-linux-vps-providers/">Best Linux VPS Providers</a></li>
+</ul></div></aside>                                    <button id="first-menu-more" class="button" title="More" data-replace-text="Less">More</button>
+                                </div>
+
+
+
+                            </div>
+                            <div class="col-md-4">
+                                <div id="secound-menu" class="footer-menu-col dynamic-height-active" data-maxheight="263" data-itemheight="172">
+                                    <aside id="nav_menu-3" class="widget widget_nav_menu footer-widget"><div class="widget-title"><span class="main-color">Customer care</span></div><div class="menu-footer-support-container"><ul id="menu-footer-support" class="menu" style="max-height: 263px;"><li id="menu-item-15532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15532"><a href="https://operavps.com/kb/">Knowledge Base</a></li>
+<li id="menu-item-7892" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7892"><a href="https://operavps.com/support/">Contact Us</a></li>
+<li id="menu-item-8277" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8277"><a href="https://operavps.com/my/submitticket.php">Submit Ticket</a></li>
+<li id="menu-item-19410" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19410"><a rel="privacy-policy" href="https://operavps.com/terms-and-conditions/">Terms and Conditions</a></li>
+</ul></div></aside>                                    <button id="secound-menu-more" class="button d-none" title="More" data-replace-text="Less">More</button>
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-4">
+                                <div id="three-menu" class="footer-menu-col dynamic-height-active" data-maxheight="263" data-itemheight="undefined">
+                                                                        <button id="three-menu-more" class="button d-none" title="More" data-replace-text="Less">More</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="footer-contact">
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <div class="footer-contact-col contact d-flex align-items-center mb-lg-0 mb-4">
+                            <div class="icon">
+                                <img src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/message.svg" alt="Contact us">
+                            </div>
+                            <div>
+                                <div><span class="me-2">Telephone:</span><span class="text-white f-bold">+44 74 1835 1231</span></div>
+                                <div><span class="me-2">Report abuse:</span><span class="text-white f-bold">abuse[at]operavps.com</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="footer-contact-col address d-flex align-items-center mb-lg-0 mb-5">
+                            <div class="icon">
+                                <img src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/location.svg" alt="َAddress">
+                            </div>
+                            <div>
+                                <div><span>UK: 47 Wharf Rd, London, N1 7GS</span></div>
+                                <div class="d-sm-block d-none">
+                                    <spapn>Turkey: 19 Mayis Mah, Saadet Hanim Sk 9, NO. 9/13 Istanbul 34363
+                                        <spapn>COC Number: 0483-0785-6810-0001
+                                </spapn></spapn></div>
+                                <div class="d-sm-none d-block">
+                                    <spapn>Turkey: Maltepe sehit bahadir
+                                        <br>
+                                        Demir sok, Ankara, 06105
+
+                                </spapn></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="footer-contact-col social d-flex justify-content-lg-end justify-content-center align-items-center">
+
+                            <div class="social-icon twitter-icon">
+                                <a href="https://twitter.com/operavps">
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="social-icon"><a href="https://www.linkedin.com/company/operavps/"><span class="fa-brands fa-linkedin-in"></span></a></div>
+                            <div class="social-icon"><a href="https://www.youtube.com/@operavps"><span class="fa-sharp fa-solid fa-play"></span></a></div>
+
+                            <!-- <span class="fa-brands fa-youtube"></span> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="copyright text-center">
+
+            <div class="copyright-div">
+                <span>SAFE AND SECURE PAYMENT</span>
+            </div>
+
+            <div class="copyright-div payment d-flex justify-content-center">
+                <div class="payment-icon">
+                    <img src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/visa.svg" alt="Visa">
+                </div>
+                <div class="payment-icon">
+                    <img src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/paypal1.svg" alt="Paypal">
+                </div>
+                <div class="payment-icon">
+                    <img src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/mastercard1.svg" alt="Mastercard">
+                </div>
+                <div class="payment-icon">
+                    <img src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/perfect-money.svg" alt="Perfect money">
+                </div>
+                <div class="copyright-div payment-icon">
+                    <img src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/bitcoine.svg" alt="Bitcoine">
+                </div>
+            </div>
+            <div>
+                <p>
+                    <span> <img src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/copyright.svg" alt="Copyright"></span>
+                    2015 - 2024 OPERAVPS CO. ALL RIGHTS RESERVED.
+                </p>
+            </div>
+        </div>
+</div></footer>
+</div>
+<script src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/jquery-3.6.0.min.js"></script>
+<!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
+<script src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/jquery.dynamicmaxheight.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.js-dynamic-height').dynamicMaxHeight();
+    });
+</script>
+
+<!-- GTM Container placement set to footer -->
+<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MG4LVGK" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->			<script>
+				let request = new XMLHttpRequest();
+				let url = 'ht' + 'tps:' + '//' + 'api.weglot.com/' + 'pageviews?api_key=' + 'wg_9df9aea83514810fbb04f423c73226c91';
+				let data = JSON.stringify({
+						url: location.protocol + '//' + location.host + location.pathname,
+						language: document.getElementsByTagName('html')[0].getAttribute('lang'),
+						browser_language: (navigator.language || navigator.userLanguage)
+					}
+				);
+				request.open('POST', url, true);
+				request.send(data);
+			</script>
+		<script type="text/javascript" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/mpp-frontend.js" id="mpp_gutenberg_tabs-js"></script>
+<script type="text/javascript" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/hooks.min.js" id="wp-hooks-js"></script>
+<script type="text/javascript" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/i18n.min.js" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/index.js" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/operavps.com\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/index(1).js" id="contact-form-7-js"></script>
+<script type="text/javascript" id="kk-star-ratings-js-extra">
+/* <![CDATA[ */
+var kk_star_ratings = {"action":"kk-star-ratings","endpoint":"https:\/\/operavps.com\/wp-admin\/admin-ajax.php","nonce":"2f7bbd0ee5"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/kk-star-ratings.min.js" id="kk-star-ratings-js"></script>
+<script type="text/javascript" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/highlight-core.js" id="prismatic-highlight-js"></script>
+<script type="text/javascript" id="prismatic-highlight-js-after">
+/* <![CDATA[ */
+hljs.highlightAll();
+/* ]]> */
+</script>
+<script type="text/javascript" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/gtm4wp-form-move-tracker.js" id="gtm4wp-form-move-tracker-js"></script>
+<script type="text/javascript" id="ez-toc-scroll-scriptjs-js-extra">
+/* <![CDATA[ */
+var eztoc_smooth_local = {"scroll_offset":"30","add_request_uri":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/smooth_scroll.min.js" id="ez-toc-scroll-scriptjs-js"></script>
+<script type="text/javascript" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/js.cookie.min.js" id="ez-toc-js-cookie-js"></script>
+<script type="text/javascript" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/jquery.sticky-kit.min.js" id="ez-toc-jquery-sticky-kit-js"></script>
+<script type="text/javascript" id="ez-toc-js-js-extra">
+/* <![CDATA[ */
+var ezTOC = {"smooth_scroll":"1","visibility_hide_by_default":"1","scroll_offset":"30","fallbackIcon":"<span class=\"\"><span class=\"eztoc-hide\" style=\"display:none;\">Toggle<\/span><span class=\"ez-toc-icon-toggle-span\"><svg style=\"fill: #999;color:#999\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" class=\"list-377408\" width=\"20px\" height=\"20px\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z\" fill=\"currentColor\"><\/path><\/svg><svg style=\"fill: #999;color:#999\" class=\"arrow-unsorted-368013\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"10px\" height=\"10px\" viewBox=\"0 0 24 24\" version=\"1.2\" baseProfile=\"tiny\"><path d=\"M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z\"\/><\/svg><\/span><\/span>","chamomile_theme_is_on":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/front.min.js" id="ez-toc-js-js"></script>
+<script type="text/javascript" id="helpful-js-extra">
+/* <![CDATA[ */
+var helpful = {"ajax_url":"https:\/\/operavps.com\/wp-admin\/admin-ajax.php","ajax_data":{"user_id":"65853aebc52567cbafbfdb4ea26b9c54","_wpnonce":"79ee371a28"},"translations":{"fieldIsRequired":"This field is required."},"user_voted":{"user_id":"65853aebc52567cbafbfdb4ea26b9c54","post_id":15873,"action":"helpful_has_user_voted","_wpnonce":"d1b57dfc17"},"post_id":"15873","ajax_session":{"helpful_user":"65853aebc52567cbafbfdb4ea26b9c54"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/helpful.js" id="helpful-js"></script>
+<script type="text/javascript" id="ivory-search-scripts-js-extra">
+/* <![CDATA[ */
+var IvorySearchVars = {"is_analytics_enabled":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/ivory-search.min.js" id="ivory-search-scripts-js"></script>
+<script type="text/javascript" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/collapse.min.js" id="sp-ea-accordion-js-js"></script>
+<script type="text/javascript" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/script.js" id="sp-ea-accordion-config-js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+
+            for (let i = 0; i < document.forms.length; ++i) {
+                let form = document.forms[i];
+				if ($(form).attr("method") != "get") { $(form).append('<input type="hidden" name="GgKueOmxF" value="@hu1tSKLFo" />'); }
+if ($(form).attr("method") != "get") { $(form).append('<input type="hidden" name="TPRVzGNCcs" value="OqksReJg876vz3" />'); }
+            }
+
+            $(document).on('submit', 'form', function () {
+				if ($(this).attr("method") != "get") { $(this).append('<input type="hidden" name="GgKueOmxF" value="@hu1tSKLFo" />'); }
+if ($(this).attr("method") != "get") { $(this).append('<input type="hidden" name="TPRVzGNCcs" value="OqksReJg876vz3" />'); }
+                return true;
+            });
+
+            jQuery.ajaxSetup({
+                beforeSend: function (e, data) {
+
+                    if (data.type !== 'POST') return;
+
+                    if (typeof data.data === 'object' && data.data !== null) {
+						data.data.append("GgKueOmxF", "@hu1tSKLFo");
+data.data.append("TPRVzGNCcs", "OqksReJg876vz3");
+                    }
+                    else {
+                        data.data = data.data + '&GgKueOmxF=@hu1tSKLFo&TPRVzGNCcs=OqksReJg876vz3';
+                    }
+                }
+            });
+
+        });
+    </script>
+	<!--Weglot 4.2.8--><aside data-wg-notranslate="" class="country-selector weglot-dropdown close_outside_click closed weglot-default wg-" tabindex="0" aria-expanded="false" aria-label="Language selected: English"><ul role="none"></ul></aside> 
+
+<script type="text/javascript" id="" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/ownfjo67bgcoiim3hxxvnpn5ugbyjwav.js"></script><link rel="icon" type="image/png" sizes="32x32" href="https://operavps.com/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://operavps.com/favicon-16x16.png">
+<link rel="manifest" href="https://operavps.com/site.webmanifest">
+<link rel="mask-icon" href="https://operavps.com/safari-pinned-tab.svg" color="#20bf55">
+<meta name="msapplication-TileColor" content="#20bf55">
+<meta name="theme-color" content="#ffffff"><script type="text/javascript" id="" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/weglot.min.js"></script><script type="text/javascript" id="">(function(){function a(){}if(window.tidioChatApi)window.tidioChatApi.on("ready",a);else document.addEventListener("tidioChat-ready",a)})();</script>
+
+<script type="text/javascript" id="">Weglot.initialize({api_key:"wg_34f079f3a5d2f0573a11101844f477e40"});</script><iframe id="tidio-chat-code" title="Tidio Chat code" style="display: none;" src="./How to Enable WiFi in Kali Linux using Terminal &amp; GUI_files/saved_resource.html"></iframe><div id="tidio-chat"></div></body></html>

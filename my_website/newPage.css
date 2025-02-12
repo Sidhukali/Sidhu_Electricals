@@ -1,0 +1,32 @@
+.main {
+	background-color : #1c1c21;
+	border : solid;
+	padding : 2rem;
+	
+}
+#button {
+
+	padding : 20px;
+	margin: 1em;
+	border-radius : 20%;
+	border-color : black;
+}
+body{
+	color : brown;
+}
+.effect{
+	background-color : black;
+	color : green;
+	text-align : center;
+	padding-top : 10px;
+	padding-left : 15px;
+	padding-bottom : 16px;
+	padding-right : 12px;
+	margin-top : 1em;
+	margin-bottom : 2rem;
+	margin-left : 4.8em;
+	margin-right : 5rem;
+	border : solid;
+	border-color : maroon;
+	border-radius : 30%
+}

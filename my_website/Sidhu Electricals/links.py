@@ -1,0 +1,4 @@
+print("this is john")
+links = ['<a href="/index.html">Index</a>','<a href="/index2.html">Index2</a>','<a href="/login(copy1).html">Login(copy)</a>','<a href="/Login.html">Login</a>','<a href="/main.html">Main</a>','<a href="/new.html">New</a>','<a href="/newPage.html">NewPage</a>','<a href="/referals.html">Refferals</a>','<a href="/services.html">Services</a>','<a href="/settings.html">Settings</a>','<a href="/sidhuSociety.html">SidhuSociety</a>','<a href="/signup.html">SignUp</a>','<a href="/storage.html">Storage</a>','<a href="/trial.html">Trial</a><a href=""></a><a href=""><a><ahref=""></a>','<a href=""></a>']
+for a in links:
+    print(f"<li>{a}</li>")

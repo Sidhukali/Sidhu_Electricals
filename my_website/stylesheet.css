@@ -1,0 +1,245 @@
+.Page_background{
+	box-sizing: border-box
+	background-color: #2a363f}
+.content_area{
+	background-color: rgb(114, 89, 51);
+	padding: 2px;
+	margin: 0px 0px 0px 0px;
+	display: table;
+	font-size:bold;
+	font: sans-serif;
+	border: black;
+	border-style: outset;
+}
+
+.page_header{
+	background-color:;
+	border:black;
+	border-style: groove;
+	padding: 4rem;
+	margin: 0px 0px 0px 0px;
+	display: block;
+}
+
+.profile_logo{
+	padding: 2px;
+	margin: 0px 0px 0px 0px;
+	background-color:;
+	color : white;
+	text-align: center;
+	/*width: 150px;
+	height: 150px;*/
+	border-radius: 50%; 
+
+
+}
+.logo_background{
+	background-color: black;
+	padding-top: 16px;
+	margin-top : -4rem; 
+	margin-right : -4rem;
+	margin-left : -4rem;
+	
+	
+}
+
+#sidhu_logo{
+	padding: 2px;
+	margin-top: 2rem;
+	margin-left:3rem;
+	margin-bottom:2rem;
+	margin-right: 1em;
+	background-color:black;
+	color : white;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	text-align: ;
+	
+
+}
+.account{
+	display:inline-block;
+	text-align: right;
+	border:black;
+	width: 20px;
+	
+	}
+
+#login{
+		padding: 2px;
+		display:inline-block;
+		margin-left : 9rem;
+		font-size: large;
+	}
+	
+#signup{
+		padding: 2px;
+		display:inline-block;
+		margin-left : 9rem;
+		font-size: large;
+
+	}
+#or{
+	color:brown;
+	}
+
+.header{
+	h1{
+	color: #3c1555;
+	border: black;
+	border-style: groove;
+	width: 16em;
+	text-align:center;
+	margin-left: 9rem; 
+	margin-right: 2rem;
+	border-radius: 20%;
+	height: 20px;
+	padding: 16px;
+	margin-top: 2px;
+	background-color: #756868;
+	}
+	
+}
+
+.th{
+	margin:auto;
+	width: auto;
+	color: red
+	
+}
+.page_links{
+	padding:2rem;
+	/*padding-top:px;*/
+	margin: 2rem;
+	font-size: 20;
+	font-family: new-times-roman;
+	font-weight:bold;
+	background-color:#694c27;
+	display : block;
+	border: #255f56;
+	/*border-top: green;*/
+	border-style: groove;
+	p{
+	color:brown;
+	display:inline-block;
+	}
+	
+	
+
+}
+.page_links.h2{
+	color: brown;
+}
+
+page_links.signup{
+	text-align: right;
+
+}
+
+#login{
+ 	text-align:right;
+
+}
+
+.proffesional_life{
+	padding: 2px;
+	margin: 2em;
+	border: black;
+	border-style: groove;
+
+}
+
+#other_industry{
+
+}
+
+h1{
+	text-align:center;
+	color:pink;
+}
+
+h2{
+	text-align: center;
+	color:blue;
+	
+}
+
+h3{
+	text-align: center;
+	color:blue;
+
+}
+
+table{
+	padding: 0px;
+	margin : 0px;
+	border: 2px;
+	border-style: groove;
+
+}
+th{ 
+	tr{
+		td{
+			text-align: center;
+			color: red;
+		}
+	}
+}
+
+tr{	
+	/*text-align: center;
+	border: black;
+	border-style: groove;
+	/*margin: 0px;
+	padding: 0px ;*/
+
+}
+
+td{
+	
+	text-align: center;
+	border: black;
+	border-style: groove;
+	/*margin: 0px 0px 0px;*/
+	padding: 2px;
+
+ 
+
+}
+#color_red{
+	color:#531212;
+}
+hr{
+	background-color:black;
+	}
+img{
+	width: 155px;
+	height: 155px;
+	border-radius: 50%;
+}
+#hr_line{
+	border-top: black;
+	border-top-style: groove;
+	margin-left: -4rem;
+	margin-right: -4rem;
+}
+
+#about{
+	color: black;
+}
+/* Login page*/
+
+button{
+
+padding: 2px;
+margin: 2em;
+color: blue;
+font-size: larger;
+font-family: sans-serif;
+font-style: bold;
+}
+
+.loop { color : royalblue ;
+}
+

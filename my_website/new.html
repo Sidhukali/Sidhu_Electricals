@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<title> New page</title>
+<head> 
+	<h1> New page</h1>
+	
+	<script>
+		document.addEventListener("DOMContentLoaded",function(){
+			document.querySelector("form").addEventListener("submit",function(event){
+				event.preventDefault();
+				console.log(event.target); //the entire form
+				console.log(event.target.username)
+				console.log("the user name is : " + event.target.username.value)//specific field value
+				console.log("the password is "+ event.target.password.value)
+			})		
+		console.log("this is outside the form tag" + document.getElementById("outside").value);	
+				
+		})
+		//email = document.getElementById("email")
+		//console.log(email)
+			/*			*/
+		//document.getElementById("username").addEventListener("input",function(event){console.log(event)})
+		
+document.addEventListener("DOMContentLoaded",function(){
+
+document.getElementById("email").addEventListener("keydown",function(event){
+			email = event.target;
+		//	console.log(email)
+		if(email.validity.typeMismatch){
+			email.setCustomValidity("Please Enter valid email");
+			email.reportValidity();
+			
+			
+		}else{
+			email.setCustomValidity("")
+		}
+		
+		})
+
+	document.getElementById("username").addEventListener("input",function(event) {console.log(event.target.data)
+        
+    })
+
+
+})				
+	
+		
+		</script>
+</head>
+
+<body>
+	<h2> Outside the form tag <span><input type="text" id="outside">
+	
+	<h2>
+	<form name="login" method="post">
+		<lable>
+			username
+		</lable>
+			<input type="text" name="username" id="username"/>
+		<lable>
+			password
+		</lable>
+			<input type="password" name="password"/>
+			
+		<button type="submit">login</button>
+		<lable> email 
+			<input type="email" name="email" required  placeholder="Enter Email address ie. abc@dcf.com" id="email"/> 			
+		</lable>
+		
+	</form>
+<body>
+
+</html>
